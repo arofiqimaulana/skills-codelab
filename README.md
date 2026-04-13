@@ -1,5 +1,7 @@
 # Real-Time Support Chat
 
+*Proyek ini dikembangkan sebagai bagian dari sesi workshop Google Developer Group tahun 2026 di Universitas Ciputra.*
+
 Proyek ini adalah aplikasi obrolan (*chat*) pelanggan waktu-nyata (real-time) yang didesain secara khusus untuk memenuhi kebutuhan dukungan pelanggan di situs web e-commerce.
 
 ## 🎯 Tujuan
