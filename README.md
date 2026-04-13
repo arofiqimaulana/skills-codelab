@@ -20,3 +20,33 @@ Sistem ini dibangun dengan arsitektur modern yang memprioritaskan performa dan s
 - **Database & Cache**:
   - **MongoDB**: Database utama untuk menyimpan struktur riwayat *chat*, riwayat agen, dan profil pengguna.
   - **Redis**: Penyimpanan in-memory (cache) sangat krusial untuk indikator kehadiran, state session, serta komunikasi *pub/sub* jika server harus diperbanyak (multi-server scaling).
+
+## 🚀 Cara Menjalankan Aplikasi
+
+Aplikasi ini dibagi menjadi dua layanan utama (Frontend dan Backend) yang harus dijalankan secara bersamaan, sebaiknya di dua terminal terpisah.
+
+### 1. Menjalankan Backend
+Backend mengurus integrasi API, WebSocket, dan database.
+```bash
+cd app_build/backend
+npm install
+npm run dev
+```
+*(Catatan: Sangat direkomendasikan untuk menginstal dan menjalankan `MongoDB` dan `Redis` agar fitur real-time persistence berjalan dengan optimal).*
+
+### 2. Menjalankan Frontend
+Frontend menggunakan Node dan merupakan antarmuka interaktif yang dibuat dengan Next.js.
+```bash
+cd app_build/frontend
+npm install
+npm run dev
+```
+Buka *browser* Anda dan ketikkan alamat URL **http://localhost:3000** untuk melihat, bereksperimen, dan berinteraksi secara real-time.
+
+## 🤖 Tim Development Otonom
+
+Sistem ini didesain dan difasilitasi oleh sinergi khusus dari tim kerja pengembangan otonom, dengan masing-masing perannya:
+- **⚙️ Product Manager (@pm)**: Menerjemahkan kebutuhan abstrak bisnis pengguna ke dalam *"Technical Specification"* yang mutakhir sebagai inti perancangan basis infrastruktur (tanpa menyentuh implementasi *coding* itu sendiri).
+- **💻 Full-Stack Engineer (@engineer)**: Menerapkan kode dan merealisasikan prototipe arsitektur dari PM menjadi basis data produksi nyata (`app_build/`) dengan kode yang efisien (*DRY*).
+- **🔍 QA Engineer (@qa)**: Bekerja menguji kelayakan batas ujung produksi, membasmi kelemahan celah *runtime* di *promises* asinkron, hingga menjamin sistem yang jauh lebih bersih.
+- **🚀 DevOps Master (@devops)**: Bereksperimen dengan terminal komputer, mengatasi segala tantangan instalasi module *npm* lokal, dan memastikan bahwa pengguna bisa dengan mudah meluncurkan aplikasi otonom dengan baik di komputer mereka.
