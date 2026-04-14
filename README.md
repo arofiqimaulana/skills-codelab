@@ -45,6 +45,22 @@ npm run dev
 ```
 Buka *browser* Anda dan ketikkan alamat URL **http://localhost:3000** untuk melihat, bereksperimen, dan berinteraksi secara real-time.
 
+## 📁 Struktur Folder
+
+```text
+skills-codelab/
+├── .agents/                    # Konfigurasi dan pengaturan untuk agent AI otonom
+│   ├── agents.md
+│   ├── skills/
+│   └── workflows/
+├── app_build/                  # Source code aplikasi utama
+│   ├── backend/                # Layanan backend (Node.js & Express)
+│   └── frontend/               # Layanan frontend (Next.js & React)
+├── production_artifacts/       # Dokumen spesifikasi teknis dan artefak produksi
+│   └── Technical_Specification.md
+└── README.md                   # Dokumentasi proyek ini
+```
+
 ## 🤖 Tim Development Otonom
 
 Sistem ini didesain dan difasilitasi oleh sinergi khusus dari tim kerja pengembangan otonom, dengan masing-masing perannya:
